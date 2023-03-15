@@ -7,10 +7,10 @@ const PLP = () => {
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch<any>(fetchProducts());
-    }, []);
+    }, [dispatch]);
     console.log("Products: ", products);
     return(
-        <div className="">
+        <div>
             <ProductComponent />
         </div>
     )
