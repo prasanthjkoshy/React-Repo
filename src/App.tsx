@@ -1,7 +1,7 @@
-import './App.css';
+import './App.scss';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './containers/header';
-import PLP from './containers/plp';
+import Header from './components/header';
+import PLP from './components/plp';
 function App() {
   return (
     <div className="App">
