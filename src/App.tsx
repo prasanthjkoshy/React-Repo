@@ -1,7 +1,7 @@
 import './App.scss';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/header';
-import ProductListingPage from './components/productListingPage';
+import ProductListingPage from './features/products/productListingPage';
 function App() {
   return (
     <div className="App">

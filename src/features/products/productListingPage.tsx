@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
-import { useAppDispatch } from '../hooks/dispathSelectorHook';
-import ProductCard from "./productCard";
-import { fetchProducts } from '../features/products/productActions';
+import { useAppDispatch } from '../../hooks/dispathSelectorHook';
+import ProductCard from "../../components/productCard";
+import { fetchProducts } from '../../services/ProductsApiService';
 const ProductListingPage = () => {
     const dispatch = useAppDispatch();
     useEffect(() => {

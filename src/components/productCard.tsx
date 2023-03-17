@@ -41,21 +41,18 @@ const ProductCard = () => {
             next={fetchMoreData}
             hasMore={true} loader
         >
-
-            
-                <Form barOpened={barOpened}
+            <Form barOpened={barOpened}
                     onClick={() => {
-                        // When form clicked, set state of baropened to true and focus the input
                         setBarOpened(true);
                         inputFocus.current && inputFocus.current.focus();
 
                     }}
-                    // on focus open search bar
+                    
                     onFocus={() => {
                         setBarOpened(true);
                         inputFocus.current && inputFocus.current.focus();
                     }}
-                    // on blur close search bar
+                    
                     onBlur={() => {
                         setBarOpened(false);
                     }}
@@ -71,7 +68,6 @@ const ProductCard = () => {
                         /></div>
                 </Form>
             {products.length > 0 ?
-
                 products
                     .filter(item => item.price !== null)
                     .filter((product) => {
