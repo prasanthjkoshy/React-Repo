@@ -1,9 +1,9 @@
-import React from "react";
+import { Typography, Box } from "@mui/material";
 const Header = () => {
     return(
-        <div className="studio-header">
-            <h1>Makeover Studio</h1>
-        </div>
+        <Box className="studio-header">
+            <Typography gutterBottom variant='h3' component='div' >Makeover Studio</Typography>
+            </Box>
     )
 }
 export default Header;
