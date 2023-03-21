@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
-import { useAppDispatch } from '../../hooks/dispathSelectorHook';
-import ProductCard from "../../components/productCard";
+import { useAppDispatch } from '../../hooks/dispatchSelectorHook';
+import ProductCard from "../../components/productsInfiniteScroll";
 import { fetchProducts } from '../../services/ProductsApiService';
 const ProductListingPage = () => {
     const dispatch = useAppDispatch();

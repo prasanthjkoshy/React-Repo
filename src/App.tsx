@@ -1,4 +1,4 @@
-import './App.scss';
+import './styles/App.scss';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/header';
 import ProductListingPage from './features/products/productListingPage';

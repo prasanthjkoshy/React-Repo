@@ -1,4 +1,17 @@
 
 export type productDataState = {
-    products: any
+    products: product[]
+};
+
+type product = {
+    id: number, 
+    brand: string, 
+    name: string, 
+    price: string, 
+    price_sign: string, 
+    currency: string, 
+    image_link: string,
+    website_link: string, 
+    product_api_url: string, 
+    api_featured_image : string
 };

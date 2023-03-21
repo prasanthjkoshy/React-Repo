@@ -1,35 +1,20 @@
 import axios from "axios";
-
-import { BASE_URL, fetchProducts, getMockedProducts } from "../utils/utils"
-
-jest.mock("axios");
+import { fetchProducts } from '../services/ProductsApiService';
 
 describe("fetchProducts", () => {
   describe("when API call is successful", () => {
-    it("should return users list", async () => {
-      // given
-      const resp = { data: getMockedProducts() };
-      (axios as unknown as jest.Mock).mockResolvedValueOnce(resp);
-
-      // when
+    it("should return products list", async () => {
       const result = await fetchProducts();
-      // then
-      expect(axios.get).toHaveBeenCalledWith(`${BASE_URL}`);
-      expect(result).toEqual(resp);
+      expect(result.length).toEqual(931);
+      expect(result[10].name).toEqual('B Smudged');
     });
   });
 
   describe("when API call fails", () => {
-    it("should return empty users list", async () => {
-      // given
+    it("should return empty product list", async () => {
       const message = "Network Error";
       (axios as unknown as jest.Mock).mockRejectedValueOnce(new Error(message));
-
-      // when
       const result = await fetchProducts();
-
-      // then
-      expect(axios.get).toHaveBeenCalledWith(`${BASE_URL}`);
       expect(result).toEqual([]);
     });
   });
