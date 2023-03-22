@@ -1,7 +1,7 @@
-# MakeOver-Studio-App
+# Makeover-Studio-App
 
 ## Description
-Welcome to 'MakeOver Studio' project! This is a Makeover Studio App made using React, typescript, Redux Toolkit ,Material UI which lists a whole variety of Makeup products retrieved from the makeup api url. It allows users to easily select their required make-up products by just using the search bar provided. With this App, users can effortlessly manage their requirements by entering which product they require and the retrieved data will be shown with the lowest priced item appearing first!
+Welcome to 'Makeover Studio' project! This is a Makeover Studio App made using React, typescript, Redux Toolkit ,Material UI which lists a whole variety of Makeup products retrieved from the makeup api url. It allows users to easily select their required make-up products by just using the search bar provided. With this App, users can effortlessly manage their requirements by entering which product they require and the retrieved data will be shown with the lowest priced item appearing first!
 
 In thi project, you can find two main functionalities:
 
