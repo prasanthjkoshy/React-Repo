@@ -1,14 +1,14 @@
 import { useEffect } from 'react';
-import { useAppDispatch } from '../../hooks/dispatchSelectorHook';
-import ProductCard from "../../components/productsInfiniteScroll";
-import { fetchProducts } from '../../services/ProductsApiService';
+import { useAppDispatch } from '../../../app/dispatchSelectorHook';
+import ProductsInfiniteScroll from "./ProductsInfiniteScroll";
+import { fetchProducts } from '../productsSlice';
 const ProductListingPage = () => {
     const dispatch = useAppDispatch();
     useEffect(() => {
         dispatch(fetchProducts());
     }, [dispatch]);
     return (
-            <ProductCard />
+            <ProductsInfiniteScroll />
     )
 }
 export default ProductListingPage;

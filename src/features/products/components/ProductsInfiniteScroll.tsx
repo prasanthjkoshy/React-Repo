@@ -1,10 +1,9 @@
-import '../styles/products.scss'
 import { useState } from "react";
 import InfiniteScroll from 'react-infinite-scroll-component';
-import SearchButton from './searchButton';
-import ProductsGrid from './productsGrid';
+import SearchButton from './SearchButton';
+import ProductsGrid from './ProductsGrid';
 
-const ProductCard = () => {
+const ProductsInfiniteScroll = () => {
     const [search, setSearch] = useState('');
     const [offset, setOffset] = useState(12);;
 
@@ -26,4 +25,4 @@ const ProductCard = () => {
         </InfiniteScroll>
     return <>{renderList}</>;
 };
-export default ProductCard;
+export default ProductsInfiniteScroll;

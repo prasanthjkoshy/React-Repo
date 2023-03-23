@@ -1,5 +1,5 @@
-import { useAppSelector } from '../hooks/dispatchSelectorHook'
-import { getAllProducts } from '../features/products/productsSlice';
+import { useAppSelector } from '../../../app/dispatchSelectorHook'
+import { getAllProducts } from '../productsSlice';
 import { Box, Paper, CardContent, Typography, CardMedia, IconButton, Link } from '@mui/material';
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 const ProductsGrid = ({ search, offset }) => {

@@ -1,6 +1,7 @@
 
 export type productDataState = {
-    products: product[]
+    products: []
+    loading: 'idle' | 'succeeded'
 };
 
 type product = {

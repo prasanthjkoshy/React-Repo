@@ -1,3 +1,11 @@
+.App {
+    text-align: center;
+}
+ 
+body ::-webkit-scrollbar {
+    width: 0px !important;
+}
+
 form {
   position: relative;
   display: flex;
@@ -31,7 +39,7 @@ transition: margin 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 }
 
-button{
+button {
   line-height: 1;
   background-color: transparent;
   border: none;
@@ -78,8 +86,6 @@ button{
 .image {
     width: 290px;
     height: 290px;
-    ;
-
 }
 
 .cards {
