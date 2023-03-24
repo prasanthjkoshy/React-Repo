@@ -21,24 +21,26 @@ const ProductsGrid = ({ search, offset }) => {
                     .map((product) => {
                         const { id, price, name, price_sign, api_featured_image, product_link } = product;
                         return (
-                            <Paper className="four column wide" component="div" key={id} >
+                            <Paper className="four column wide" component="div" key={id}>
                                 <Link underline='none' href={product_link} target="_blank">
-                                    <Box className="ui link cards">
+                                    <Box className="ui link cards" sx={{ padding: '10px', float: 'left', overflow: 'none' }}>
                                         <CardContent className="card content">
                                             <CardMedia
-                                                className="image"
+                                                sx={{width: 290,height: 290}}
                                                 component="img"
                                                 image={api_featured_image}
                                                 alt={name}
                                                 title="Click to View Product Page"
                                             />
-                                            <Typography component="div" variant="h5" className="header" title={name}>
+                                            <Typography component="div" variant="h5"
+                                                sx={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}
+                                                title={name}>
                                                 {name}
                                             </Typography>
                                             <Typography variant="subtitle1" color="text.secondary" component="div" className="meta price">
                                                 {price_sign} {price}
                                             </Typography>
-                                            <IconButton aria-label="play/pause" href="#" onClick={() => alert('Added item to Bag')}>
+                                            <IconButton href="#" onClick={() => alert('Added item to Bag')}>
                                                 <ShoppingBagIcon sx={{ height: 35, width: 35 }} />
                                             </IconButton>
                                         </CardContent>
@@ -47,8 +49,8 @@ const ProductsGrid = ({ search, offset }) => {
                             </Paper>
                         );
                     }) :
-                <div><img src="https://cdn.dribbble.com/users/2382015/screenshots/6065978/no_result_still_2x.gif?compress=1&resize=700x400" className="" alt='Loader' /></div>
-            : <div><img src="https://cdn.dribbble.com/users/93144/screenshots/2348873/media/6cfd6933505bcd4e608c664ccae6bdd5.gif" className="img-loader" alt='Loader' /></div>
+                <Box component="img" src="https://cdn.dribbble.com/users/2382015/screenshots/6065978/no_result_still_2x.gif?compress=1&resize=700x400" className="" alt='NoData' />
+            : <Box component="img" src="https://cdn.dribbble.com/users/93144/screenshots/2348873/media/6cfd6933505bcd4e608c664ccae6bdd5.gif" sx={{ width: 450, height: 450 }} alt='Loader' />
 
     );
 };

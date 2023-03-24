@@ -8,7 +8,7 @@ const ProductListingPage = () => {
         dispatch(fetchProducts());
     }, [dispatch]);
     return (
-            <ProductsInfiniteScroll />
+        <ProductsInfiniteScroll />
     )
 }
 export default ProductListingPage;

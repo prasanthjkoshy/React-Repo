@@ -1,9 +1,9 @@
 import { Typography, Box } from "@mui/material";
 const Header = () => {
-    return(
-        <Box className="studio-header">
+    return (
+        <Box sx={{backgroundColor: 'black',color: 'white',}}>
             <Typography gutterBottom variant='h3' component='div' >Makeover Studio</Typography>
-            </Box>
+        </Box>
     )
 }
 export default Header;
