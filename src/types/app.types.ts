@@ -4,7 +4,7 @@ export type productDataState = {
     loading: 'idle' | 'succeeded'
 };
 
-type product = {
+export type product = {
     id: number, 
     brand: string, 
     name: string, 
@@ -14,5 +14,6 @@ type product = {
     image_link: string,
     website_link: string, 
     product_api_url: string, 
-    api_featured_image : string
+    api_featured_image : string,
+    product_link : string,
 };

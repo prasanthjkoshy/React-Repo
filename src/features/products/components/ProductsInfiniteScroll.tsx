@@ -17,8 +17,7 @@ const ProductsInfiniteScroll = () => {
         <InfiniteScroll
             dataLength={offset}
             next={fetchMoreData}
-            hasMore={true} loader
-        >
+            hasMore={true} loader>
             <SearchButton setOffset={setOffset} setSearch={setSearch} />
             {<ProductsGrid search={search} offset={offset} />}
 

@@ -8,7 +8,6 @@ afterEach(() => {
 })
   
 describe("Search Component" ,() => {
-    
     render(<SearchButton setOffset="12" setSearch ="perfume"/>); 
     const search = screen.getByTestId("form"); 
       
